@@ -11,4 +11,4 @@ void maxMin() {
     }
     printf("Max: %d\nMin: %d\n", max, min);
 }
- 
+ // day17
