@@ -25,4 +25,4 @@ void rotateArray() {
     }
     printf("\n");
 }
- 
+ // day18
