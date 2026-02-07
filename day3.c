@@ -1,35 +1,25 @@
+//Linear Search with Comparison Count
 #include <stdio.h>
-
 int main() {
     int n, k, i;
-    int comparisons = 0;
-
-    // Read array size
+    int comparisons=0;
     scanf("%d", &n);
 
     int arr[n];
-
-    // Read array elements
-    for(i = 0; i < n; i++) {
+    for(i=0; i<n; i++) {
         scanf("%d", &arr[i]);
     }
-
-    // Read key
     scanf("%d", &k);
-
-    // Linear search
     for(i = 0; i < n; i++) {
         comparisons++;
-        if(arr[i] == k) {
-            printf("Found at index %d\n", i);
-            printf("Comparisons = %d\n", comparisons);
+        if(arr[i]==k) {
+            printf("found at index %d\n", i);
+            printf("comparisons = %d\n", comparisons);
             return 0;
         }
     }
-
-     // If not found
-    printf("Not Found\n");
-    printf("Comparisons = %d\n", comparisons);
+    printf("not found\n");
+    printf("comparisons = %d\n", comparisons);
 
     return 0;
 }
