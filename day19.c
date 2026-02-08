@@ -37,4 +37,4 @@ int main() {
         printf("%d %d\n", arr[bestR], arr[bestL]);
 
     return 0;
-}
+}// day19
