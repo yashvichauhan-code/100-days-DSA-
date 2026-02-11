@@ -15,4 +15,4 @@ void zeroSumSubarrays() {
     }
     printf("%d\n", count);
 }
- 
+ // day20
