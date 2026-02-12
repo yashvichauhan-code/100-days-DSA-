@@ -1,6 +1,5 @@
 //Problem: Given integers a and b, compute a^b using recursion without using pow() function.
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
 long long power(int a, int b) {
     // Base case
@@ -13,9 +12,10 @@ long long power(int a, int b) {
 
 int main() {
     int a, b;
-    cin >> a >> b;
 
-    cout << power(a, b);
+    scanf("%d %d", &a, &b);
+
+    printf("%lld", power(a, b));
 
     return 0;
 }
