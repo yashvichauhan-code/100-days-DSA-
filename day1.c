@@ -1,5 +1,5 @@
 #include<stdio.h>
-/*int main(){
+int main(){
     int n, pos, x;
     int arr[100];
     printf("enter number of elements: ");
@@ -21,7 +21,7 @@
         printf("%d ", arr[i]);
     }
     return 0;
-}*/
+}
 
 int main() {
     int n, target;
