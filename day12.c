@@ -1,4 +1,4 @@
-//symmetric matrix
+//symmetric matrix. 
 #include <stdio.h>
 
 int main() {
