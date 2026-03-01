@@ -1,42 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
-// Comparison function for qsort
-int compare(const void *a, const void *b) {
-    return (*(int*)a - *(int*)b);
-}
-
-int main() {
+void frequencyCount() {
     int n;
-    
-    // Read the size of the array
-    if (scanf("%d", &n) != 1 || n <= 0) return 0;
-
-    int *arr = (int*)malloc(n * sizeof(int));
-
-    // Read n integers
+    scanf("%d", &n);
+    int arr[n];
+    for (int i = 0; i < n; i++) scanf("%d", &arr[i]);
+ 
+    int visited[n];
+    for (int i = 0; i < n; i++) visited[i] = 0;
+ 
+    int first = 1;
     for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-    }
-
-    // 1. Sort the array so identical elements are neighbors
-    qsort(arr, n, sizeof(int), compare);
-
-    // 2. Iterate and count frequencies
-    for (int i = 0; i < n; i++) {
+        if (visited[i]) continue;
         int count = 1;
-
-        // Check how many times the current element repeats
-        while (i < n - 1 && arr[i] == arr[i + 1]) {
-            count++;
-            i++;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] == arr[i]) {
+                count++;
+                visited[j] = 1;
+            }
         }
-
-        // Print in the required format
-        printf("%d:%d\n", arr[i], count);
+        if (!first) printf(" ");
+        printf("%d:%d", arr[i], count);
+        first = 0;
     }
-
-    free(arr);
-    return 0;
+    printf("\n");
 }
-
